@@ -31,7 +31,7 @@ public class CardDeliveryTest {
         $("[data-test-id =\"phone\"] input").setValue("+79189189818");
         $("[data-test-id =\"agreement\"]").click();
         $(By.className("button")).click();
-        $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(20));
-        $(".notification__content").shouldBe(visible, Duration.ofSeconds(20)).shouldHave(exactText("Встреча успешно забронироана на " + meetingDate));
+        $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(30));
+        $(".notification__content").shouldBe(visible, Duration.ofSeconds(30)).shouldHave(exactText("Встреча успешно забронирована на " + meetingDate));
     }
 }
